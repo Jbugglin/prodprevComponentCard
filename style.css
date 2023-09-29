@@ -111,6 +111,11 @@ button img {
     margin: 0rem 0.75rem 0rem 0rem;
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: var(--neu-veryDarkBlue);
+}
+
 footer {
     position: absolute;
     bottom: 0;
