@@ -1,3 +1,11 @@
+:root {
+    --pri-darkCyan: hsl(158, 36%, 37%);
+    --pri-cream: hsl(30, 38%, 92%);
+    --neu-veryDarkBlue: hsl(212, 21%, 14%);
+    --neu-darkGrayishBlue: hsl(228, 12%, 48%);
+    --neu-white: hsl(0, 0%, 100%);
+}
+
 *,
 *::after,
 *::before {
@@ -6,9 +14,106 @@
     padding: 0;
 }
 
+html,
+body {
+    overflow: hidden;
+}
+
 body {
     width: 100dvw;
     height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pri-cream);
+}
+
+main {
+    width: 90%;
+    height: max-content;
+    border-radius: 0.75rem;
+    background-color: var(--neu-white);
+}
+
+.heroImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.75rem 0.75rem 0rem 0rem;
+}
+
+span {
+    letter-spacing: 0.25rem;
+    font-size: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: var(--neu-darkGrayishBlue);
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+p {
+    margin: 1rem 0.125rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--neu-darkGrayishBlue);
+}
+
+.productDetails {
+    padding: 1.25rem;
+}
+
+.priceInformation {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0rem 0.75rem 0rem;
+}
+
+.salePrice {
+    color: var(--pri-darkCyan);
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+.fullPrice {
+    margin: 1rem;
+    font-size: 0.875rem;
+    text-decoration: line-through;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--neu-darkGrayishBlue);
+}
+
+button {
+    width: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pri-darkCyan);
+    border: none;
+    color: var(--neu-white);
+    height: 50px;
+    border-radius: 0.5rem;
+    margin: 0.5rem auto 0.125rem;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+button img {
+    margin: 0rem 0.75rem 0rem 0rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
 
 .attribution {
@@ -18,16 +123,4 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
-}
-
-.priceInformation {
-    display: flex;
-}
-
-.salePrice {
-    margin: 1rem;
-}
-
-.fullPrice {
-    margin: 1rem;
 }
