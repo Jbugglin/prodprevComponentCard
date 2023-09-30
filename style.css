@@ -2,7 +2,7 @@
     --pri-darkCyan: hsl(158, 36%, 37%);
     --pri-cream: hsl(30, 38%, 92%);
     --neu-veryDarkBlue: hsl(212, 21%, 14%);
-    --neu-darkGrayishBlue: hsl(228, 12%, 48%);
+    --neu-darkGrayishBlue: hsla(228, 12%, 48%, 0.882);
     --neu-white: hsl(0, 0%, 100%);
 }
 
@@ -36,10 +36,14 @@ main {
     background-color: var(--neu-white);
 }
 
-.heroImage img {
+.heroImage #mobileImage {
     width: 100%;
     height: 100%;
     border-radius: 0.75rem 0.75rem 0rem 0rem;
+}
+
+#desktopImage {
+    display: none;
 }
 
 span {
@@ -84,7 +88,7 @@ p {
 
 .fullPrice {
     margin: 1rem;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     text-decoration: line-through;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
@@ -128,4 +132,41 @@ footer {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 767px) {
+    main {
+        width: 560px;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mobileImage {
+        display: none;
+    }
+    #desktopImage {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.75rem 0rem 0rem 0.75rem;
+    }
+    .productDetails {
+        width: 50%;
+        /* top right bottom left */
+        padding: 1.425rem 1.5rem 1.4rem 1.4rem;
+    }
+    .heroImage {
+        width: 50%;
+    }
+    button {
+        width: 95%;
+    }
+    h1 {
+        line-height: 2rem;
+        margin-bottom: 1.625rem;
+    }
+    p {
+        font-size: 0.825rem;
+    }
 }
